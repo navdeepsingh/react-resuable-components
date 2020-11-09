@@ -4,10 +4,6 @@ import {useThemeToggler} from "../../hooks/useThemeToggler";
 import "./index.scss";
 
 // Getting state & action through props is first step for resuable components
-// type Props = { 
-//   theme: string, 
-//   toggleTheme: (element1: React.ReactNode, element2: React.ReactNode) => void 
-// }
 
 const DayNightSwitcher = () => {
   const [theme, toggleTheme] = useThemeToggler();
