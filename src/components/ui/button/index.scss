@@ -1,0 +1,14 @@
+.buttonClass {
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-weight: 500;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+
+  &.primary{
+    background-color: blueviolet;
+    color: white;
+  }
+}

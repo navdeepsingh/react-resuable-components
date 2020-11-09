@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import DayNightSwitcher from './components/ui/day-night-switcher';
+
 import './App.css';
 
-function App() {
+const App = () => {
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <DayNightSwitcher />
       </header>
     </div>
   );
