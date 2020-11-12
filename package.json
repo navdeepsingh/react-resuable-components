@@ -49,5 +49,12 @@
     "@types/react": "^16.9.56",
     "@types/react-redux": "^7.1.11",
     "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-typescript@3.1.61"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }

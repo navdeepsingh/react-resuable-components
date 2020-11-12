@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from "react";
-import {useThemeToggler} from "../../hooks/useThemeToggler";
+import {useThemeToggler} from "../../hooks/use-theme-toggler";
 
 import "./index.scss";
 
