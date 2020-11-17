@@ -4,7 +4,18 @@ import DayNightSwitcher from './components/ui/day-night-switcher';
 
 import './App.css';
 
+
 const App = () => {
+
+ const [theme, setTheme] = useState('dark');
+
+const toggleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('bright');      
+    } else {
+      setTheme('dark');
+    }
+  }
 
 
   return (
@@ -22,7 +33,10 @@ const App = () => {
         >
           Learn React
         </a>
-        <DayNightSwitcher />
+        <DayNightSwitcher 
+          mode={theme} 
+          themeSwitcher={toggleTheme}
+        />
       </header>
     </div>
   );

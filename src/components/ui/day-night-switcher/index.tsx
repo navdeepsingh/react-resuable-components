@@ -1,27 +1,29 @@
 import React, {useRef, useEffect} from "react";
-import {useThemeToggler} from "../../hooks/use-theme-toggler";
 
 import "./index.scss";
 
-// Getting state & action through props is first step for resuable components
-const DayNightSwitcher = () => {
+type switcherProps = {
+  mode: string;
+  themeSwitcher: Function;
+}
 
-  const [theme, toggleTheme] = useThemeToggler();
+// Getting state & action through props is first step for resuable components
+const DayNightSwitcher = ({mode, themeSwitcher}: switcherProps) => {
 
   const inputCheckbox = useRef(null);
   const parentElement = useRef(null);
 
 
   useEffect(() => {
-    console.log('Trigger Renderer:' + theme)
-    if (theme === 'bright') {
+    console.log('Trigger Renderer:' + mode)
+    if (mode === 'bright') {
       parentElement.current.classList.remove('react-toggle--checked')
       inputCheckbox.current.setAttribute('aria-checked', 'false')
     } else {
       parentElement.current.classList.add('react-toggle--checked')
       inputCheckbox.current.setAttribute('aria-checked', 'true')
     }    
-  }, [theme]);
+  }, [mode]);
 
   const handleFocus = () => {
     document.querySelector(".react-toggle").classList.add('react-toggle--focus');
@@ -30,7 +32,7 @@ const DayNightSwitcher = () => {
   const handleClick = () => {
     document.querySelector(".react-toggle").classList.add('react-toggle--focus');
     inputCheckbox.current.focus();
-    toggleTheme();
+    themeSwitcher();
   }
 
   const handleBlur = () => {  
