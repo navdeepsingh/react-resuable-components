@@ -20,8 +20,8 @@ const DayNightSwitcher = ({mode, themeSwitcher}: switcherProps) => {
       parentElement.current.classList.remove('react-toggle--checked')
       inputCheckbox.current.setAttribute('aria-checked', 'false')
     } else {
-      parentElement.current.classList.add('react-toggle--checked')
-      inputCheckbox.current.setAttribute('aria-checked', 'true')
+      parentElement.current.classList.add( 'react-toggle--checked' )
+      inputCheckbox.current.setAttribute( 'aria-checked', 'true' )
     }    
   }, [mode]);
 

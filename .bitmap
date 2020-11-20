@@ -14,7 +14,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "navdeepsingh.react-components/ui/day-night-switcher@1.0.1": {
+    "navdeepsingh.react-components/ui/day-night-switcher@1.0.2": {
         "files": [
             {
                 "relativePath": "src/components/ui/day-night-switcher/index.scss",
